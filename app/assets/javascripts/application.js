@@ -15,3 +15,18 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("#fade-element").click(function(event){
+    $(this).fadeOut(500);
+  })
+
+  $('#red-element').dblclick(function(){
+    $(this).css("color", "red");
+    $(this).text("I'm red, because I was doubleclicked.");
+  })
+  $("#blue-bg").hover(function(){
+    $(this).addClass("blue-background-element")
+  })
+
+});
