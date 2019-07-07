@@ -3,5 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def jquery
+    @friend = Friend.new
+    @friends = Friend.all
   end
 end
