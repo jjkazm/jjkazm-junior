@@ -1,19 +1,24 @@
-%h1 jQuery page
+.jumbotron
+  %h1 jQuery page
 
-
-%h3 Lets try simple styling
-#fade-element  I will fade out on click
+.card
+  .card-title
+    %h3 Lets try simple styling
+  .card-body
+    #fade-element  I will fade out on click
+    %br
+    #red-element I will get red on doubleclick
+    %br
+    #blue-bg I will get blue background once hovered on
 %br
-#red-element I will get red on doubleclick
-%br
-#blue-bg I will get blue background once hovered on
-%br
-%h3 Lets try Ajax.
-%h4 Below is a simple remote form for creating instance of Friend class. Add new one
-
-#friend-form
-  = form_for @friend, remote:true do |f|
-    = f.text_field :name
-    = f.submit "Add friend"
-
-%div#friends-info
+.card
+  .card-title
+    %h3 Lets try Ajax.
+  .card-body
+    %h4 Below is a simple remote form for creating instance of Friend class. Add new one
+    #friend-form
+      = form_for @friend, remote:true do |f|
+        = f.text_field :name
+        = f.submit "Add friend"
+    #friends-info
+      = render partial: 'friends/friends_partial', locals: { friends: Friend.all }
