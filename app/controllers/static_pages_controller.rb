@@ -6,4 +6,6 @@ class StaticPagesController < ApplicationController
     @friend = Friend.new
     @friends = Friend.all
   end
+
+  def query_optimizing; end 
 end

@@ -1,0 +1,22 @@
+.jumbotron
+  %h1 Query optimizing
+
+.card
+  .card-title
+    %h3 Topics
+  .card-body
+    %ul
+      %li includes  e.g User.includes(:posts)
+      %li batches e.g User.all.find_each(batch_size: 5000)
+      %li
+        use pluck and select
+        %ol
+          %li user_emails = User.where(status: "active").pluck(:email)
+          %li user_emails = User.where(status: "active").select(:email)
+      %li use '.exists?' instead of '.present?'
+      %li 'delete_all' instead of 'destroy' on individual objects
+      %li pass array of hashes to 'create' action instead of iterating
+      %li 'update_all' instead of 'update' on individual objects
+      %li use "Bullet gem" and/or others
+
+    =link_to "Source", "https://medium.com/@User3141592/active-record-query-performance-tips-a3c3947b968", class: "btn btn-primary"

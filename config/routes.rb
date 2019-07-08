@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: "static_pages#home"
 
   get 'jquery', to: "static_pages#jquery"
+  get 'query_optimizing', to: "static_pages#query_optimizing"
   resources :friends, only: [:create]
 end
