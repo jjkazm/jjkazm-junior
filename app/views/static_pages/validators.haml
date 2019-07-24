@@ -1,0 +1,14 @@
+.jumbotron
+  %h1 Validators
+
+.card
+  .card-title
+    %h3 We have Patient model
+    %ul requirements
+      %li BMI between 25 and  35
+      %li height between 110cm  and 250cm
+  .card-body
+    = simple_form_for @patient do |f|
+      = f.input :weight
+      = f.input :height
+      = f.button :submit

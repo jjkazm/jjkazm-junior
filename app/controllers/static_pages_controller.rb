@@ -7,5 +7,7 @@ class StaticPagesController < ApplicationController
     @friends = Friend.all
   end
 
-  def query_optimizing; end 
+  def query_optimizing; end
+
+  def validators; end
 end

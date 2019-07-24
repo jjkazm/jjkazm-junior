@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'haml'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
+gem 'simple_form', '~> 4.1'
+gem 'aws-sdk-s3'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

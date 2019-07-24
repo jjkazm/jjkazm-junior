@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <%= image_tag url_for(@dog.photo) %>
+  <%= link_to @dog.photo.filename, rails_blob_path(@dog.photo, disposition: "attachment") %>
+</p>
+
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>
