@@ -5,10 +5,12 @@
   <%= @dog.name %>
 </p>
 
-<p>
-  <%= image_tag url_for(@dog.photo) %>
-  <%= link_to @dog.photo.filename, rails_blob_path(@dog.photo, disposition: "attachment") %>
-</p>
+<%- if @dog.photo.attached? %>
+  <p>
+    <%= image_tag url_for(@dog.photo) %>
+    <%= link_to @dog.photo.filename, rails_blob_path(@dog.photo, disposition: "attachment") %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
