@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'jquery', to: "static_pages#jquery"
   get 'query_optimizing', to: "static_pages#query_optimizing"
   resources :friends, only: [:create]
+  resources :patients, only: [:create]
 end
