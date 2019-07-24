@@ -9,8 +9,13 @@ class FriendsController < ApplicationController
     end
   end
 
+  def show
+    @friend = Friend.find(params[:id])
+  end
+
   private
   def friend_params
-    params.require(:friend).permit(:name)
+    params.require(:friend).permit(:name, :photo)
   end
+
 end

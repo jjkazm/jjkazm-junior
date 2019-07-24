@@ -1,0 +1,4 @@
+= @friend.name
+- if @friend.photo.attached?
+  = image_tag url_for(@friend.photo)
+  = link_to @friend.photo.filename, rails_blob_path(@friend.photo, disposition: "attachment")
