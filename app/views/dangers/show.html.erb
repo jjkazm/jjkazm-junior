@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @danger.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @danger.last %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @danger.description %>
+</p>
+
+<%= link_to 'Edit', edit_danger_path(@danger) %> |
+<%= link_to 'Back', dangers_path %>

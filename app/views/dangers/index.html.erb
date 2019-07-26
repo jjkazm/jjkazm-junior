@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h1>Dangers</h1>
+<%= form_tag dangers_upload_path do %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<%= form_tag dangers_destroy_all_path do %>
+  <%= submit_tag "Delete" %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dangers.each do |danger| %>
+      <tr>
+        <td><%= danger.first %></td>
+        <td><%= danger.last %></td>
+        <td><%= danger.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
